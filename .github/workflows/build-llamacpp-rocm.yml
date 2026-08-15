@@ -5,11 +5,11 @@ on:
       operating_systems:
         description: 'Operating systems to build for (comma-separated: windows,ubuntu)'
         required: false
-        default: 'windows,ubuntu'
+        default: 'ubuntu'
       gfx_target:
         description: 'AMD GPU targets (comma-separated)'
         required: false
-        default: 'gfx1151,gfx1150,gfx120X,gfx110X,gfx103X,gfx90a,gfx908'
+        default: 'gfx103X'
       rocm_version:
         description: 'ROCm version to use (e.g., 7.13.0a20260318) or "latest" to auto-detect'
         required: false
@@ -21,7 +21,7 @@ on:
       create_release:
         description: 'Create a GitHub release after successful build'
         required: false
-        default: true
+        default: false
         type: boolean
 
   # Trigger on pushes to pull requests
